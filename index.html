@@ -17,6 +17,12 @@
   <header>
     <h1>買い物リスト</h1>
     <div class="header-actions">
+      <button id="settingsBtn" class="header-btn" title="同期設定">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
       <button id="editBtn" class="header-btn" title="編集モード">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
@@ -94,12 +100,31 @@
     </div>
   </div>
 
+  <!-- 同期設定モーダル -->
+  <div id="settingsModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <h2 class="modal-title">同期設定</h2>
+      <p class="modal-desc">スマホ↔PCでリストを共有するには、GitHubのアクセストークンが必要です。</p>
+      <div class="form-group">
+        <label for="inputPat">GitHub Personal Access Token</label>
+        <input type="password" id="inputPat" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" spellcheck="false">
+        <small>
+          <a id="patLink" href="https://github.com/settings/tokens/new?scopes=repo&description=%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88" target="_blank" rel="noopener">← ここをクリックしてトークンを取得</a>（"repo" のみチェック → Generate token）
+        </small>
+      </div>
+      <div id="patStatus" class="pat-status hidden"></div>
+      <div class="modal-actions">
+        <button id="settingsCancelBtn" class="btn-secondary">キャンセル</button>
+        <button id="settingsTestBtn" class="btn-secondary">接続テスト</button>
+        <button id="settingsSaveBtn" class="btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast通知 -->
   <div id="toast" class="toast hidden" role="alert"></div>
 
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-  <script src="firebase-config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

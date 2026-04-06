@@ -680,6 +680,25 @@ main {
   100% { opacity: 0; }
 }
 
+/* ===== 設定モーダル内 ===== */
+.pat-status {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.pat-status--ok { background: #dcfce7; color: #166534; }
+.pat-status--ng { background: #fee2e2; color: #991b1b; }
+
+.modal-content a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
 /* ===== ドラッグ中のスタイル ===== */
 .item-row.dragging {
   opacity: 0.5;
