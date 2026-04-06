@@ -2,7 +2,7 @@ name: GitHub Pages へデプロイ
 
 on:
   push:
-    branches: [main, claude/shopping-list-app-design-FI6K2]
+    branches: [main]
   workflow_dispatch:
 
 permissions:

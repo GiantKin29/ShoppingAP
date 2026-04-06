@@ -25,10 +25,6 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  // Firebase / CDN リクエストはキャッシュしない
-  if (e.request.url.includes('firebase') || e.request.url.includes('gstatic')) {
-    return;
-  }
   e.respondWith(
     caches.match(e.request).then((cached) => cached || fetch(e.request))
   );

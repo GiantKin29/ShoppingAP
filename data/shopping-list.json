@@ -1,0 +1,29 @@
+[
+  {
+    "id": "mnn2lorh2xfrx",
+    "name": "和風野菜ミックス",
+    "unit": "",
+    "orderQty": 0,
+    "amazonASIN": "",
+    "seiyuItemId": "4973450153151",
+    "sortOrder": 3
+  },
+  {
+    "id": "mnn3p0erv1zgk",
+    "name": "牛乳",
+    "unit": "",
+    "orderQty": 1,
+    "amazonASIN": "",
+    "seiyuItemId": "4973450162337",
+    "sortOrder": 1
+  },
+  {
+    "id": "mnn3q553yb1wl",
+    "name": "ヨーグルト",
+    "unit": "",
+    "orderQty": 1,
+    "amazonASIN": "",
+    "seiyuItemId": "4973450151393",
+    "sortOrder": 2
+  }
+]
