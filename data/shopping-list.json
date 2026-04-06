@@ -7,5 +7,14 @@
     "amazonASIN": "",
     "seiyuItemId": "4973450153151",
     "sortOrder": 3
+  },
+  {
+    "id": "mnn3p0erv1zgk",
+    "name": "牛乳",
+    "unit": "",
+    "orderQty": 0,
+    "amazonASIN": "",
+    "seiyuItemId": "",
+    "sortOrder": 1
   }
 ]
