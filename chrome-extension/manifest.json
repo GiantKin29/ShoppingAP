@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "買い物リスト - 西友自動カート追加",
+  "version": "1.0.0",
+  "description": "買い物リストアプリから西友ネットスーパーに自動でカート追加します",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://netsuper.rakuten.co.jp/seiyu/item/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
