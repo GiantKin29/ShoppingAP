@@ -16,5 +16,14 @@
     "amazonASIN": "",
     "seiyuItemId": "",
     "sortOrder": 1
+  },
+  {
+    "id": "mnn3q553yb1wl",
+    "name": "ヨーグルト",
+    "unit": "",
+    "orderQty": 0,
+    "amazonASIN": "",
+    "seiyuItemId": "4973450151393",
+    "sortOrder": 2
   }
 ]
